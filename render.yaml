@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: cryptoagentx
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: X_CLIENT_ID
+        sync: false
+      - key: X_CLIENT_SECRET
+        sync: false
+      - key: X_CALLBACK_URL
+        sync: false
+      - key: X_SCOPES
+        sync: false
