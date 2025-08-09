@@ -1,10 +1,11 @@
 FROM python:3.11-slim
+ENV PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /srv
 
-COPY . /app
+COPY app /srv/app
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /srv/app/requirements.txt
 
 EXPOSE 8080
 
